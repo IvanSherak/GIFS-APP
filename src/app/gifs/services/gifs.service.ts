@@ -15,7 +15,7 @@ private serviceUrl   : string = 'https://api.giphy.com/v1/gifs';
 
   constructor( private http: HttpClient ) {
     this.loadLocalStorage();
-    console.log('Gifs service ready');
+    //console.log('Gifs service ready');
    }
 
   get tagsHistory (){
@@ -72,7 +72,7 @@ private serviceUrl   : string = 'https://api.giphy.com/v1/gifs';
     this.http.get<SearchResponse>(`${ this.serviceUrl}/search`,{ params })
         .subscribe(resp =>{
           this.gifList = resp.data;
-          console.log({gifs : this.gifList});
+          // console.log({gifs : this.gifList});
         });
 
    // this._tagsHistory.unshift(tag);
